@@ -35,7 +35,7 @@ class UsersApi(object):
     def get_favorites_for_user(self, user_gid, resource_type, workspace, opts, **kwargs):  # noqa: E501
         """Get a user's favorites  # noqa: E501
 
-        Returns all of a user's favorites in the given workspace, of the given type. Results are given in order (The same order as Asana's sidebar).  # noqa: E501
+        Returns all of a user's favorites within a specified workspace and of a given type. The results are ordered exactly as they appear in the user's Asana sidebar in the web application. Note that this endpoint currently only returns favorites for the current user (i.e., the user associated with the authentication token).  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_favorites_for_user(user_gid, resource_type, workspace, async_req=True)
@@ -46,7 +46,7 @@ class UsersApi(object):
         :param str resource_type: The resource type of favorites to be returned. (required)
         :param str workspace: The workspace in which to get favorites. (required)
         :param int limit: Results per page. The number of objects to return per page. The value must be between 1 and 100.
-        :param str offset: Offset token. An offset to the next page returned by the API. A pagination request will return an offset token, which can be used as an input parameter to the next request. If an offset is not passed in, the API will return the first page of results. 'Note: You can only pass in an offset that was returned to you via a previously paginated request.'
+        :param str offset: Offset token. An offset to the next page returned by the API. A pagination request will return an offset token, which can be used as an input parameter to the next request. If an offset is not passed in, the API will return the first page of results. *Note: You can only pass in an offset that was returned to you via a previously paginated request.*
         :param list[str] opt_fields: This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include.
         :return: AsanaNamedResourceArray
                  If the method is called asynchronously,
@@ -62,7 +62,7 @@ class UsersApi(object):
     def get_favorites_for_user_with_http_info(self, user_gid, resource_type, workspace, opts, **kwargs):  # noqa: E501
         """Get a user's favorites  # noqa: E501
 
-        Returns all of a user's favorites in the given workspace, of the given type. Results are given in order (The same order as Asana's sidebar).  # noqa: E501
+        Returns all of a user's favorites within a specified workspace and of a given type. The results are ordered exactly as they appear in the user's Asana sidebar in the web application. Note that this endpoint currently only returns favorites for the current user (i.e., the user associated with the authentication token).  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_favorites_for_user_with_http_info(user_gid, resource_type, workspace, async_req=True)
@@ -73,7 +73,7 @@ class UsersApi(object):
         :param str resource_type: The resource type of favorites to be returned. (required)
         :param str workspace: The workspace in which to get favorites. (required)
         :param int limit: Results per page. The number of objects to return per page. The value must be between 1 and 100.
-        :param str offset: Offset token. An offset to the next page returned by the API. A pagination request will return an offset token, which can be used as an input parameter to the next request. If an offset is not passed in, the API will return the first page of results. 'Note: You can only pass in an offset that was returned to you via a previously paginated request.'
+        :param str offset: Offset token. An offset to the next page returned by the API. A pagination request will return an offset token, which can be used as an input parameter to the next request. If an offset is not passed in, the API will return the first page of results. *Note: You can only pass in an offset that was returned to you via a previously paginated request.*
         :param list[str] opt_fields: This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include.
         :return: AsanaNamedResourceArray
                  If the method is called asynchronously,
@@ -342,7 +342,7 @@ class UsersApi(object):
         :param str workspace: The workspace or organization ID to filter users on.
         :param str team: The team ID to filter users on.
         :param int limit: Results per page. The number of objects to return per page. The value must be between 1 and 100.
-        :param str offset: Offset token. An offset to the next page returned by the API. A pagination request will return an offset token, which can be used as an input parameter to the next request. If an offset is not passed in, the API will return the first page of results. 'Note: You can only pass in an offset that was returned to you via a previously paginated request.'
+        :param str offset: Offset token. An offset to the next page returned by the API. A pagination request will return an offset token, which can be used as an input parameter to the next request. If an offset is not passed in, the API will return the first page of results. *Note: You can only pass in an offset that was returned to you via a previously paginated request.*
         :param list[str] opt_fields: This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include.
         :return: UserResponseArray
                  If the method is called asynchronously,
@@ -368,7 +368,7 @@ class UsersApi(object):
         :param str workspace: The workspace or organization ID to filter users on.
         :param str team: The team ID to filter users on.
         :param int limit: Results per page. The number of objects to return per page. The value must be between 1 and 100.
-        :param str offset: Offset token. An offset to the next page returned by the API. A pagination request will return an offset token, which can be used as an input parameter to the next request. If an offset is not passed in, the API will return the first page of results. 'Note: You can only pass in an offset that was returned to you via a previously paginated request.'
+        :param str offset: Offset token. An offset to the next page returned by the API. A pagination request will return an offset token, which can be used as an input parameter to the next request. If an offset is not passed in, the API will return the first page of results. *Note: You can only pass in an offset that was returned to you via a previously paginated request.*
         :param list[str] opt_fields: This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include.
         :return: UserResponseArray
                  If the method is called asynchronously,
@@ -484,7 +484,7 @@ class UsersApi(object):
 
         :param async_req bool
         :param str team_gid: Globally unique identifier for the team. (required)
-        :param str offset: Offset token. An offset to the next page returned by the API. A pagination request will return an offset token, which can be used as an input parameter to the next request. If an offset is not passed in, the API will return the first page of results. 'Note: You can only pass in an offset that was returned to you via a previously paginated request.'
+        :param str offset: Offset token. An offset to the next page returned by the API. A pagination request will return an offset token, which can be used as an input parameter to the next request. If an offset is not passed in, the API will return the first page of results. *Note: You can only pass in an offset that was returned to you via a previously paginated request.*
         :param list[str] opt_fields: This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include.
         :return: UserResponseArray
                  If the method is called asynchronously,
@@ -508,7 +508,7 @@ class UsersApi(object):
 
         :param async_req bool
         :param str team_gid: Globally unique identifier for the team. (required)
-        :param str offset: Offset token. An offset to the next page returned by the API. A pagination request will return an offset token, which can be used as an input parameter to the next request. If an offset is not passed in, the API will return the first page of results. 'Note: You can only pass in an offset that was returned to you via a previously paginated request.'
+        :param str offset: Offset token. An offset to the next page returned by the API. A pagination request will return an offset token, which can be used as an input parameter to the next request. If an offset is not passed in, the API will return the first page of results. *Note: You can only pass in an offset that was returned to you via a previously paginated request.*
         :param list[str] opt_fields: This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include.
         :return: UserResponseArray
                  If the method is called asynchronously,
@@ -628,7 +628,7 @@ class UsersApi(object):
 
         :param async_req bool
         :param str workspace_gid: Globally unique identifier for the workspace or organization. (required)
-        :param str offset: Offset token. An offset to the next page returned by the API. A pagination request will return an offset token, which can be used as an input parameter to the next request. If an offset is not passed in, the API will return the first page of results. 'Note: You can only pass in an offset that was returned to you via a previously paginated request.'
+        :param str offset: Offset token. An offset to the next page returned by the API. A pagination request will return an offset token, which can be used as an input parameter to the next request. If an offset is not passed in, the API will return the first page of results. *Note: You can only pass in an offset that was returned to you via a previously paginated request.*
         :param list[str] opt_fields: This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include.
         :return: UserResponseArray
                  If the method is called asynchronously,
@@ -652,7 +652,7 @@ class UsersApi(object):
 
         :param async_req bool
         :param str workspace_gid: Globally unique identifier for the workspace or organization. (required)
-        :param str offset: Offset token. An offset to the next page returned by the API. A pagination request will return an offset token, which can be used as an input parameter to the next request. If an offset is not passed in, the API will return the first page of results. 'Note: You can only pass in an offset that was returned to you via a previously paginated request.'
+        :param str offset: Offset token. An offset to the next page returned by the API. A pagination request will return an offset token, which can be used as an input parameter to the next request. If an offset is not passed in, the API will return the first page of results. *Note: You can only pass in an offset that was returned to you via a previously paginated request.*
         :param list[str] opt_fields: This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include.
         :return: UserResponseArray
                  If the method is called asynchronously,

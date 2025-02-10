@@ -61,6 +61,8 @@ class Configuration(six.with_metaclass(TypeWithDefault, object)):
         self.username = ""
         # Password for HTTP basic authentication
         self.password = ""
+        # access token for OAuth
+        self.access_token = ""
         # Logging Settings
         self.logger = {}
         self.logger["package_logger"] = logging.getLogger("asana")
@@ -256,5 +258,5 @@ class Configuration(six.with_metaclass(TypeWithDefault, object)):
                "OS: {env}\n"\
                "Python Version: {pyversion}\n"\
                "Version of the API: 1.0\n"\
-               "SDK Package Version: 5.0.3".\
+               "SDK Package Version: 5.0.15".\
                format(env=sys.platform, pyversion=sys.version)

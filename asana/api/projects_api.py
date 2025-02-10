@@ -331,7 +331,7 @@ class ProjectsApi(object):
     def add_members_for_project(self, body, project_gid, opts, **kwargs):  # noqa: E501
         """Add users to a project  # noqa: E501
 
-        Adds the specified list of users as members of the project. Note that a user being added as a member may also be added as a *follower* as a result of this operation. This is because the user's default notification settings (i.e., in the \"Notifcations\" tab of \"My Profile Settings\") will override this endpoint's default behavior of setting \"Tasks added\" notifications to `false`. Returns the updated project record.  # noqa: E501
+        Adds the specified list of users as members of the project. Note that a user being added as a member may also be added as a *follower* as a result of this operation. This is because the user's default notification settings (i.e., in the \"Notifications\" tab of \"My Profile Settings\") will override this endpoint's default behavior of setting \"Tasks added\" notifications to `false`. Returns the updated project record.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.add_members_for_project(body, project_gid, async_req=True)
@@ -355,7 +355,7 @@ class ProjectsApi(object):
     def add_members_for_project_with_http_info(self, body, project_gid, opts, **kwargs):  # noqa: E501
         """Add users to a project  # noqa: E501
 
-        Adds the specified list of users as members of the project. Note that a user being added as a member may also be added as a *follower* as a result of this operation. This is because the user's default notification settings (i.e., in the \"Notifcations\" tab of \"My Profile Settings\") will override this endpoint's default behavior of setting \"Tasks added\" notifications to `false`. Returns the updated project record.  # noqa: E501
+        Adds the specified list of users as members of the project. Note that a user being added as a member may also be added as a *follower* as a result of this operation. This is because the user's default notification settings (i.e., in the \"Notifications\" tab of \"My Profile Settings\") will override this endpoint's default behavior of setting \"Tasks added\" notifications to `false`. Returns the updated project record.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.add_members_for_project_with_http_info(body, project_gid, async_req=True)
@@ -1345,7 +1345,7 @@ class ProjectsApi(object):
 
         :param async_req bool
         :param int limit: Results per page. The number of objects to return per page. The value must be between 1 and 100.
-        :param str offset: Offset token. An offset to the next page returned by the API. A pagination request will return an offset token, which can be used as an input parameter to the next request. If an offset is not passed in, the API will return the first page of results. 'Note: You can only pass in an offset that was returned to you via a previously paginated request.'
+        :param str offset: Offset token. An offset to the next page returned by the API. A pagination request will return an offset token, which can be used as an input parameter to the next request. If an offset is not passed in, the API will return the first page of results. *Note: You can only pass in an offset that was returned to you via a previously paginated request.*
         :param str workspace: The workspace or organization to filter projects on.
         :param str team: The team to filter projects on.
         :param bool archived: Only return projects whose `archived` field takes on the value of this parameter.
@@ -1372,7 +1372,7 @@ class ProjectsApi(object):
 
         :param async_req bool
         :param int limit: Results per page. The number of objects to return per page. The value must be between 1 and 100.
-        :param str offset: Offset token. An offset to the next page returned by the API. A pagination request will return an offset token, which can be used as an input parameter to the next request. If an offset is not passed in, the API will return the first page of results. 'Note: You can only pass in an offset that was returned to you via a previously paginated request.'
+        :param str offset: Offset token. An offset to the next page returned by the API. A pagination request will return an offset token, which can be used as an input parameter to the next request. If an offset is not passed in, the API will return the first page of results. *Note: You can only pass in an offset that was returned to you via a previously paginated request.*
         :param str workspace: The workspace or organization to filter projects on.
         :param str team: The team to filter projects on.
         :param bool archived: Only return projects whose `archived` field takes on the value of this parameter.
@@ -1492,7 +1492,7 @@ class ProjectsApi(object):
         :param async_req bool
         :param str task_gid: The task to operate on. (required)
         :param int limit: Results per page. The number of objects to return per page. The value must be between 1 and 100.
-        :param str offset: Offset token. An offset to the next page returned by the API. A pagination request will return an offset token, which can be used as an input parameter to the next request. If an offset is not passed in, the API will return the first page of results. 'Note: You can only pass in an offset that was returned to you via a previously paginated request.'
+        :param str offset: Offset token. An offset to the next page returned by the API. A pagination request will return an offset token, which can be used as an input parameter to the next request. If an offset is not passed in, the API will return the first page of results. *Note: You can only pass in an offset that was returned to you via a previously paginated request.*
         :param list[str] opt_fields: This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include.
         :return: ProjectResponseArray
                  If the method is called asynchronously,
@@ -1517,7 +1517,7 @@ class ProjectsApi(object):
         :param async_req bool
         :param str task_gid: The task to operate on. (required)
         :param int limit: Results per page. The number of objects to return per page. The value must be between 1 and 100.
-        :param str offset: Offset token. An offset to the next page returned by the API. A pagination request will return an offset token, which can be used as an input parameter to the next request. If an offset is not passed in, the API will return the first page of results. 'Note: You can only pass in an offset that was returned to you via a previously paginated request.'
+        :param str offset: Offset token. An offset to the next page returned by the API. A pagination request will return an offset token, which can be used as an input parameter to the next request. If an offset is not passed in, the API will return the first page of results. *Note: You can only pass in an offset that was returned to you via a previously paginated request.*
         :param list[str] opt_fields: This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include.
         :return: ProjectResponseArray
                  If the method is called asynchronously,
@@ -1638,7 +1638,7 @@ class ProjectsApi(object):
         :param async_req bool
         :param str team_gid: Globally unique identifier for the team. (required)
         :param int limit: Results per page. The number of objects to return per page. The value must be between 1 and 100.
-        :param str offset: Offset token. An offset to the next page returned by the API. A pagination request will return an offset token, which can be used as an input parameter to the next request. If an offset is not passed in, the API will return the first page of results. 'Note: You can only pass in an offset that was returned to you via a previously paginated request.'
+        :param str offset: Offset token. An offset to the next page returned by the API. A pagination request will return an offset token, which can be used as an input parameter to the next request. If an offset is not passed in, the API will return the first page of results. *Note: You can only pass in an offset that was returned to you via a previously paginated request.*
         :param bool archived: Only return projects whose `archived` field takes on the value of this parameter.
         :param list[str] opt_fields: This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include.
         :return: ProjectResponseArray
@@ -1664,7 +1664,7 @@ class ProjectsApi(object):
         :param async_req bool
         :param str team_gid: Globally unique identifier for the team. (required)
         :param int limit: Results per page. The number of objects to return per page. The value must be between 1 and 100.
-        :param str offset: Offset token. An offset to the next page returned by the API. A pagination request will return an offset token, which can be used as an input parameter to the next request. If an offset is not passed in, the API will return the first page of results. 'Note: You can only pass in an offset that was returned to you via a previously paginated request.'
+        :param str offset: Offset token. An offset to the next page returned by the API. A pagination request will return an offset token, which can be used as an input parameter to the next request. If an offset is not passed in, the API will return the first page of results. *Note: You can only pass in an offset that was returned to you via a previously paginated request.*
         :param bool archived: Only return projects whose `archived` field takes on the value of this parameter.
         :param list[str] opt_fields: This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include.
         :return: ProjectResponseArray
@@ -1786,7 +1786,7 @@ class ProjectsApi(object):
         :param async_req bool
         :param str workspace_gid: Globally unique identifier for the workspace or organization. (required)
         :param int limit: Results per page. The number of objects to return per page. The value must be between 1 and 100.
-        :param str offset: Offset token. An offset to the next page returned by the API. A pagination request will return an offset token, which can be used as an input parameter to the next request. If an offset is not passed in, the API will return the first page of results. 'Note: You can only pass in an offset that was returned to you via a previously paginated request.'
+        :param str offset: Offset token. An offset to the next page returned by the API. A pagination request will return an offset token, which can be used as an input parameter to the next request. If an offset is not passed in, the API will return the first page of results. *Note: You can only pass in an offset that was returned to you via a previously paginated request.*
         :param bool archived: Only return projects whose `archived` field takes on the value of this parameter.
         :param list[str] opt_fields: This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include.
         :return: ProjectResponseArray
@@ -1812,7 +1812,7 @@ class ProjectsApi(object):
         :param async_req bool
         :param str workspace_gid: Globally unique identifier for the workspace or organization. (required)
         :param int limit: Results per page. The number of objects to return per page. The value must be between 1 and 100.
-        :param str offset: Offset token. An offset to the next page returned by the API. A pagination request will return an offset token, which can be used as an input parameter to the next request. If an offset is not passed in, the API will return the first page of results. 'Note: You can only pass in an offset that was returned to you via a previously paginated request.'
+        :param str offset: Offset token. An offset to the next page returned by the API. A pagination request will return an offset token, which can be used as an input parameter to the next request. If an offset is not passed in, the API will return the first page of results. *Note: You can only pass in an offset that was returned to you via a previously paginated request.*
         :param bool archived: Only return projects whose `archived` field takes on the value of this parameter.
         :param list[str] opt_fields: This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include.
         :return: ProjectResponseArray
@@ -2064,7 +2064,7 @@ class ProjectsApi(object):
     def project_save_as_template(self, body, project_gid, opts, **kwargs):  # noqa: E501
         """Create a project template from a project  # noqa: E501
 
-        Creates and returns a job that will asynchronously handle the project template creation. Note that while the resulting project template can be accessed with the API, it won't be visible in the Asana UI until Project Templates 2.0 is launched in the app. See more in [this forum post](https://forum.asana.com/t/a-new-api-for-project-templates/156432).  # noqa: E501
+        Creates and returns a job that will asynchronously handle the project template creation.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.project_save_as_template(body, project_gid, async_req=True)
@@ -2088,7 +2088,7 @@ class ProjectsApi(object):
     def project_save_as_template_with_http_info(self, body, project_gid, opts, **kwargs):  # noqa: E501
         """Create a project template from a project  # noqa: E501
 
-        Creates and returns a job that will asynchronously handle the project template creation. Note that while the resulting project template can be accessed with the API, it won't be visible in the Asana UI until Project Templates 2.0 is launched in the app. See more in [this forum post](https://forum.asana.com/t/a-new-api-for-project-templates/156432).  # noqa: E501
+        Creates and returns a job that will asynchronously handle the project template creation.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.project_save_as_template_with_http_info(body, project_gid, async_req=True)
